@@ -1,0 +1,106 @@
+.user-nav {
+	align-self: stretch;
+
+    display: flex;
+	align-items: center;
+	
+    & > * {
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+	}
+	
+	
+	&__icon-box {
+        position: relative;
+	}
+	
+	&__user {
+		color: $color-grey-light-1;
+		font-size: 1.4rem;
+		font-weight: 700;
+		cursor: pointer;
+
+		&-name {
+			padding: 1rem;
+		}
+
+		&:focus {
+			outline: none;
+			background: $color-primary-dark-1;
+		}
+	}
+
+	& > *:hover {
+		background: $color-primary-dark-1;
+	}
+
+    &__icon {
+        height: 2.25rem;
+		width: 2.25rem;
+		fill: $color-grey-dark-4;
+    }
+
+    &__notification {
+        font-size: .8rem;
+        height: 1.75rem;
+        width: 1.75rem;
+        border-radius: 50%;
+        background:$color-primary;
+        color:#fff;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.1rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+	}
+	
+	&__menu,
+	&__menu:hover {
+		position: absolute;
+		top: 7.2rem;
+		right: 2rem;
+
+		display: flex;
+		flex-direction: column;
+		align-items:flex-start;
+		height: max-content;
+		background: $color-primary-dark-1;
+		border-radius: 10px 0 10px 10px;
+		overflow: hidden;
+
+		font-size: 1.6rem;
+		padding: 0rem;
+		text-align: left;
+
+	}
+
+
+	&__options {
+		list-style: none;
+		padding: .7rem;
+		align-self: stretch;
+		color: #fff;
+
+		&:not(:last-child){
+			border-bottom: $border-light;
+		}
+
+		&:hover {
+			background: $color-primary;
+		}
+	}
+
+	&__link:link,
+	&__link:visited {
+		text-decoration: none;
+		color: #fff;
+		padding-left: .5rem;
+	}
+}
+
+

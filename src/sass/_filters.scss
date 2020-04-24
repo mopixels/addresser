@@ -1,0 +1,134 @@
+.filters {
+    display: flex;
+    align-items: center;
+    // flex: 0 0 10%;
+    // align-content: flex-start;
+    
+
+    font-size: 1.4rem;
+    font-family: $font-primary;
+    color: #fff;
+    padding: 2rem 0;
+
+    & > * {
+        padding-right: 3rem;
+    }
+
+    &__search {
+        flex: 0 0 23%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        &-input {
+            color: inherit;
+            font-family: inherit;
+            color: $color-grey-dark-3;
+            border: outset 2px rgba(0,0,0,0.5);
+            outline: none;
+            background: $color-grey-light-3;
+            padding: .7rem 2rem;
+            border-radius: 100px;
+            width: 90%;
+            transition: all .2s;
+            margin-right: -3.25rem;
+    
+            &:focus {
+                outline: none;
+                width: 100%;
+                background-color: $color-grey-light-3;
+            }
+    
+            &::-webkit-input-placeholder {
+                color: $color-grey-light-4;
+            }
+        }
+    
+        &-input:focus + &-button {
+            background-color: $color-grey-light-3;
+        }
+    
+        &-button{
+            border: none;
+            cursor: pointer;
+    
+            &:focus {
+                outline: none;
+            }
+    
+            &:active {
+                transform: translateY(2px);
+            }
+        }
+    }
+
+    &__city {
+
+        &-dropdown {
+            border-radius: 100px;
+            padding: .7rem 2rem;
+            border: outset 2px rgba(0,0,0,0.5);
+            background: $color-grey-light-3;
+            font-family: inherit;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+
+    &__active {
+        display: flex;
+        align-items: center;
+        margin-right: auto;
+
+        &-checkbox {
+            margin-right: 5px;
+        }
+
+        &-text {
+
+            font-size: 1.6rem;
+        }
+    }
+
+    &__create {
+        transition: all .3s;
+        
+        &-button {
+            font-family: inherit;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 100px;
+            box-shadow: $shadow-light;
+            padding: .7rem 2rem;
+            border: none;
+            background: $color-primary-light-1;
+            color: currentColor;
+            cursor: pointer;
+            transition: all .3s;
+
+            &:hover {
+                box-shadow: 0 1rem 2rem rgba(#000, .15);
+            }
+
+            &--text {
+                padding-left: 1rem;
+            }
+        }
+
+        &:hover {
+            transform: translateY(-3px);
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &:active {
+            transform: translateY(0px);
+        }
+    }
+}

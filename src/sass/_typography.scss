@@ -1,0 +1,70 @@
+// FONT VARIABLES
+$font-primary: 'Open Sans', sans-serif;
+$font-logo: 'Cocogoose Pro Regular', sans-serif;
+
+// $font-primary: 'Nunito', sans-serif;
+// $font-display: 'Josefin Sans', sans-serif;
+
+
+@font-face {
+    font-family: 'Cocogoose Pro Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Cocogoose Pro Regular'), url('Cocogoose Pro Regular Trial.woff') format('woff');
+}
+
+
+// .heading-1 {
+//     @extend %heading;
+//     font-size: 4.5rem;
+//     color: $color-grey-light-1;
+//     line-height: 1;
+// }
+
+// .heading-2 {
+//     @extend %heading;
+//     font-size: 4rem;
+//     font-style: italic;
+//     line-height: 1;
+
+//     &--light { color: $color-grey-light-1; }
+//     &--dark { color: $color-grey-dark-1;}
+// }
+
+.heading-3 {
+    font-family: $font-primary;
+    font-size: 1.4rem;
+    color: #fff;
+    padding-bottom: .5rem;
+    // text-transform: uppercase;
+}
+
+// .heading-4 {
+//     @extend %heading;
+//     font-size: 1.9rem;
+
+//     &--light { color: $color-grey-light-1; }
+//     &--dark { color: $color-grey-dark-1;}
+// }
+
+// .btn {
+//     background-color: $color-primary;
+//     color:#fff;
+//     border: none;
+//     border-radius: 0;
+//     font-family: $font-display;
+//     font-size: 1.5rem;
+//     text-transform: uppercase;
+//     padding: 1.8rem 3rem;
+//     cursor: pointer;
+//     transition: all .2s;
+
+//     &:hover {
+//         background-color: $color-primary-dark;
+//     }
+// }
+
+// .mb-sm { margin-bottom: 2rem; }
+// .mb-md { margin-bottom: 3rem; }
+// .mb-lg { margin-bottom: 4rem; }
+// .mb-hg { margin-bottom: 8rem; }
