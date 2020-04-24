@@ -2,6 +2,7 @@
   "name": "addresser",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mopixels.github.io/addresser/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -16,6 +17,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "concat:css": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.concat.css -o css/stylee.prefix.css",
@@ -40,6 +43,7 @@
   "devDependencies": {
     "autoprefixer": "^9.7.4",
     "concat": "^1.0.3",
+    "gh-pages": "^2.2.0",
     "node-sass": "^4.13.1",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.0"
