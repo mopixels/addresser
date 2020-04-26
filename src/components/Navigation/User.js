@@ -1,8 +1,6 @@
 import React from 'react';
 import { FaBookmark, FaComments, FaUsers, FaRegCommentDots, FaWrench, FaPowerOff } from 'react-icons/fa';
 
-
-
 class User extends React.Component {
 constructor(){
  super();
@@ -47,17 +45,17 @@ hideDropdownMenu() {
           	(
           <ul className='user-nav__menu'>
 	         <li className='user-nav__options'> 
-           <FaUsers className='user-nav__options-icon'/><a className='user-nav__link' href="Groups">Groups</a></li>
+           <FaUsers className='user-nav__options-icon'/><a className='user-nav__link' href="Groups" onClick={ (event) => event.preventDefault() }>Groups</a></li>
 
 	         <li className='user-nav__options'>
-           <FaRegCommentDots className='user-nav__options-icon' /><a className='user-nav__link' href="Frequently contacted">Frequently contacted</a></li>
+           <FaRegCommentDots className='user-nav__options-icon' /><a className='user-nav__link' href="Frequently contacted" onClick={ (event) => event.preventDefault() }>Frequently contacted</a></li>
 
 	         <li className='user-nav__options'> 
-           <FaWrench className='user-nav__options-icon'/><a className='user-nav__link' href="Preferences">Preferences</a></li>
+           <FaWrench className='user-nav__options-icon'/><a className='user-nav__link' href="Preferences" onClick={ (event) => event.preventDefault() }>Preferences</a></li>
 
 	         <li className='user-nav__options'> 
 
-           <FaPowerOff className='user-nav__options-icon'/><a className='user-nav__link' href="Log Out">Log Out</a></li>
+           <FaPowerOff className='user-nav__options-icon'/><a className='user-nav__link' href="Log Out" onClick={ (event) => event.preventDefault() }>Log Out</a></li>
           </ul>
         ) : ( null )
         }
@@ -66,4 +64,4 @@ hideDropdownMenu() {
   }
 }
 
-export default User
+export default User;

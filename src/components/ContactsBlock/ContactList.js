@@ -1,5 +1,5 @@
 import React  from 'react';
-import { FaArrowDown, FaPencilAlt, FaTrashAlt } from 'react-icons/fa';
+import { FaArrowDown, FaPencilAlt, FaTrashAlt, FaCircle } from 'react-icons/fa';
 
 class ContactList extends React.Component {
 	render () {
@@ -12,8 +12,8 @@ class ContactList extends React.Component {
 						<th className=''>&nbsp;</th>
 						<th className='table__head-name'
 							onClick={ () => this.props.sortByName('first') }>
-							Name <FaArrowDown style= {{}} />
-						 </th>
+							Name <FaArrowDown />
+						</th>
 						<th className='table__head-surname'>Surname </th>
 						<th className='table__head-city'>Location </th>
 						<th className='table__head-email'>Email </th>
@@ -30,9 +30,7 @@ class ContactList extends React.Component {
 							value={this.props.id}
 							onClick={(e) => this.props.selectContact(data)}
 							className='table__body-row'>
-								<td>
-									{/* {data.active ? (<a/>) : (<a/>)} */}
-								</td> 
+								<td>{data.active ? (< FaCircle className='online' />) : < FaCircle className='offline' /> }</td> 
 								<td>{data.name.first}</td>
 								<td>{data.name.last}</td>
 								<td>{data.location.country} / {data.location.city}</td>
@@ -41,8 +39,6 @@ class ContactList extends React.Component {
 								<td className='table__body-buttons'> 
 									<button className="" onClick={() => alert('Sorry, you cannot edit this information, please try again later.')}><FaPencilAlt/></button>
 									<button className=""  onClick={() => alert('Sorry, you cannot delete this contact, please try again later.')}><FaTrashAlt/></button>
-									{/* < className='table__body-buttons--pencil' /> */}
-									{/* <FaTrashAlt className='table__body-buttons--bin'/> */}
 								</td>
 							</tr>
 						</tbody>

@@ -1,7 +1,4 @@
 import React from 'react';
-// import { FaUserCircle } from 'react-icons/fa';
-// import './ContactsDesign/ContactCard.css';
-// import userpic from './ContactsDesign/userpic.jpg';
 
 class ContactCard extends React.Component {
 	render() {
@@ -11,7 +8,6 @@ class ContactCard extends React.Component {
 			<div className='card' >
 	        	<img 
 				style={{height: '18rem', width: '18rem', display: 'block', margin: '1rem', border: 'outset 3px rgba(0,0,0,0.1)',  borderRadius: '50%', alignSelf: 'center'}} 
-				// src={`https://api.adorable.io/avatars/${value.email}.png`} 
 				src={`https://robohash.org/${value.name}.png?set=set3`}
 				alt='' />
 

@@ -1,9 +1,6 @@
 .filters {
     display: flex;
-    align-items: center;
-    // flex: 0 0 10%;
-    // align-content: flex-start;
-    
+    align-items: center;   
 
     font-size: 1.4rem;
     font-family: $font-primary;
@@ -77,18 +74,18 @@
         }
     }
 
-
     &__active {
         display: flex;
         align-items: center;
         margin-right: auto;
-
+        
         &-checkbox {
+            cursor: pointer;
             margin-right: 5px;
         }
 
         &-text {
-
+            cursor: pointer;
             font-size: 1.6rem;
         }
     }
