@@ -9,6 +9,10 @@
     box-shadow: $shadow-dark;
     border-spacing: 0;
 
+    @media only screen and (max-width: $bp-small) {
+        margin-left: 0;
+    }
+
     &__head {
         background-image: linear-gradient(to right, $color-secondary-light-1, $color-primary-light-2);
         text-align: left;
@@ -53,25 +57,92 @@
             padding: .9rem;
             border-bottom: $border-light;
             cursor: pointer;
+
+            @media only screen and (max-width: $bp-mini) {
+                padding: 1rem .4rem;
+            }
         }
 
         &-phone {
             text-align: right;
         }
 
-        &-buttons {
+        &-buttons {  
 
             & > * {
-                color: currentColor;
-                height: 2.5rem;
-                width: 2.5rem;
-
+                border: none;
                 cursor: pointer;
-                margin-left: 1rem;
+                margin-left: 5px;
+                padding: 2px 3px;
                 border-radius: 5px;
-                transition: all .2s;
+                color: $color-grey-dark-3;
                 outline: none;
+                background-color: $color-grey-light-3;
+                transition: all .2s;
+
+                &:hover {
+                    transform: translateY(-2px);
+                    box-shadow: $shadow-light;
+
+                    &:active {
+                        transform: translateY(0px);
+                    }
+                }
+
+                @media only screen and (max-width: $bp-mini) {
+                    margin-left:.5rem;
+                }
             }
+        }
+
+        @media only screen and (max-width: $bp-largest) {
+            &-city {
+                visibility: hidden;
+                display: none;
+
+
+            }
+        }
+
+    }
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 1.6rem;
+    }
+        
+
+    @media only screen and (max-width: $bp-large) {
+        .table {
+            &__head {
+                &-email {
+                    visibility: hidden;
+                    display: none;
+                }
+            }
+
+            &__body {
+                &-email {
+                    visibility: hidden;
+                    display: none;
+                }
+            } 
+        }
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        .table {
+            &__head {
+                &-phone {
+                    visibility: hidden;
+                    display: none;
+                }
+            }
+
+            &__body {
+                &-phone {
+                    visibility: hidden;
+                    display: none;
+                }
+            } 
         }
     }
 }

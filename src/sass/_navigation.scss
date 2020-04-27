@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex: 0 0;
 
     font-family: $font-primary;
     background-color: $color-primary-dark-2;
@@ -12,6 +13,15 @@
         font-size: 4rem;
         color: #fff;
         margin-left: 3rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            padding-top: .5rem;
+            font-size: 3.15rem;
+        }
+
+        @media only screen and (max-width: $bp-mini) {
+            margin-left: 0;
+        }
     }
 
     &-buttons {
@@ -20,6 +30,16 @@
         border-radius: 6rem;
         background-color: $color-primary-light-1;
         overflow: hidden;
+
+        @media only screen and (max-width: $bp-small) {
+            margin: 1rem auto;
+            order: 5;
+            // margin-left: aut;
+        }
+
+        @media only screen and (max-width: $bp-mini) {
+            order: 0;
+        }
     }
 
     &__link:link,
@@ -31,14 +51,19 @@
         font-weight: 700;
         text-transform: uppercase;
         text-align: center;
+
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 1.2rem;
+        }
     }
 
     &__item {
         cursor: pointer;
-        padding: 7px 2rem;
+        padding: 7px 3rem;
         margin: 1px;
-        transition: cubic-bezier(0,1,0,1);
-        transition-duration: 3s;
+        transition: all ease-out .01s;
+        // transition: cubic-bezier(0,2,0,1);
+        // transition-duration: 1s;
         
         &--active {
             box-shadow: inset 0 0 2px #111;
@@ -60,5 +85,17 @@
             box-shadow: inset 0 0 2px #111;
             background: $color-primary-dark-1;
         }
+    }
+    @media only screen and (max-width: $bp-small) {
+        justify-content: space-between;
+        flex-wrap:  wrap;
+        height: auto;
+        // flex-grow: 1;
+    }
+
+    @media only screen and (max-width: $bp-mini) {
+        flex-direction: column;
+        flex: 0 0;
+        // align-content: center;
     }
 }

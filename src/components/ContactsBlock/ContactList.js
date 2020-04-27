@@ -28,13 +28,19 @@ class ContactList extends React.Component {
 							<tr
 							key={data}
 							value={this.props.id}
-							onClick={(e) => this.props.selectContact(data)}
+							onClick={(e) => {
+								this.props.selectContact(data); 
+								if(window.innerWidth <= 700) {this.props.showCard(e)};
+							} }
 							className='table__body-row'>
 								<td>{data.active ? (< FaCircle className='online' />) : < FaCircle className='offline' /> }</td> 
 								<td>{data.name.first}</td>
 								<td>{data.name.last}</td>
-								<td>{data.location.country} / {data.location.city}</td>
-								<td>{data.email}</td>
+								<td>
+									<span className='table__body-country'>{data.location.country}</span>
+									<span className='table__body-city'> / {data.location.city}</span>
+								</td>
+								<td className='table__body-email'>{data.email}</td>
 								<td className='table__body-phone'>{data.phone}</td>
 								<td className='table__body-buttons'> 
 									<button className="" onClick={() => alert('Sorry, you cannot edit this information, please try again later.')}><FaPencilAlt/></button>

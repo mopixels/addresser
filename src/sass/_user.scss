@@ -13,7 +13,11 @@
 	}
 	
 	&__icon-box {
-        position: relative;
+		position: relative;
+		
+		@media only screen and (max-width: $bp-mini) {
+			padding: 1.5rem;
+		}
 	}
 	
 	&__user {
@@ -24,11 +28,19 @@
 
 		&-name {
 			padding: 1rem;
+
+			@media only screen and (max-width: $bp-mini) {
+				padding: 2rem 0;
+			}
 		}
 
 		&:focus {
 			outline: none;
 			background: $color-primary-dark-1;
+		}
+
+		@media only screen and (max-width: $bp-mini) {
+			margin-left: auto;
 		}
 	}
 
@@ -40,6 +52,12 @@
         height: 2.25rem;
 		width: 2.25rem;
 		fill: $color-grey-dark-4;
+
+		@media only screen and (max-width: $bp-mini) {
+			height: 2.5rem;
+			width: 2.5rem;
+			
+		}
     }
 
     &__notification {
@@ -55,7 +73,15 @@
 
         display: flex;
         justify-content: center;
-        align-items: center;
+		align-items: center;
+
+		@media only screen and (max-width: $bp-small) {
+			top: .5rem;
+		}
+		
+		@media only screen and (max-width: $bp-mini) {
+			top: .8rem;
+		}
 	}
 	
 	&__menu,
@@ -71,10 +97,20 @@
 		background: $color-primary-dark-1;
 		border-radius: 10px 0 10px 10px;
 		overflow: hidden;
+		z-index: 10;
 
 		font-size: 1.6rem;
 		padding: 0rem;
 		text-align: left;
+
+		@media only screen and (max-width: $bp-small) {
+			top: 5rem;
+			right: 1.5rem;
+		}
+		
+		@media only screen and (max-width: $bp-mini) {
+			top: 16.5rem;
+		}
 	}
 
 	&__options {
@@ -97,5 +133,9 @@
 		text-decoration: none;
 		color: #fff;
 		padding-left: .5rem;
+	}
+
+	@media only screen and (max-width: $bp-mini) {
+		// padding-bottom: 1rem;
 	}
 }

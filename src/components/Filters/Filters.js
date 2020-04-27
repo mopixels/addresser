@@ -22,9 +22,7 @@ class Filters extends React.Component {
 						id="name"
 						onChange={ this.changeOption.bind(this, 'name') } />
 					<button className="filters__search-button">
-						<div className="filters__search-icon">
-							<FaSearch />
-						</div>
+						<FaSearch />
 					</button>
 				</div>
 

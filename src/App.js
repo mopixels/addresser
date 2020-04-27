@@ -15,11 +15,14 @@ class App extends Component {
       sortedAsc: true,
       name: '',
       country: '',
-      showActive: false
+      showActive: false,
+      displayCard: false
     };
     this.selectContact = this.selectContact.bind(this);
     this.sortByName = this.sortByName.bind(this);
     this.filterContactList = this.filterContactList.bind(this);
+    this.showCard = this.showCard.bind(this);
+    this.hideCard = this.hideCard.bind(this); 
   };
 
 async componentDidMount() {
@@ -78,6 +81,19 @@ async componentDidMount() {
     };
   };
 
+  showCard(e) {
+    e.preventDefault();
+    this.setState({ displayCard: true }, () => {
+    document.addEventListener('click', this.hideCard);
+    });
+  }
+
+  hideCard() {
+   this.setState({ displayCard: false }, () => {
+   document.removeEventListener('click', this.hideCard);
+    });
+  }
+
   render() {
     const contacts = this.state.contacts;
     let filteredContacts = this.state.contacts;
@@ -113,6 +129,8 @@ async componentDidMount() {
           id={this.state.id}
           sortByName={this.sortByName}
           selectContact={this.selectContact} 
+          displayCard={this.state.displayCard}
+          showCard={this.showCard}
         />
 
         <Footer />

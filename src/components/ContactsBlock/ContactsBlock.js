@@ -11,6 +11,7 @@ class ContactsBlock extends React.Component {
         <ContactCard 
           data={this.props.data} 
           value={this.props.id}
+          displayCard={this.props.displayCard}
         />
 
         <ContactList 
@@ -18,6 +19,7 @@ class ContactsBlock extends React.Component {
           sortByName={this.props.sortByName}  
           value={this.props.id} 
           selectContact={this.props.selectContact}
+          showCard={this.props.showCard}
         />
       </div>
 		);

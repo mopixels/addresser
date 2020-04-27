@@ -96,4 +96,12 @@
             transform: translateY(0px);
         }
     }
+    @media only screen and (max-width: $bp-mini) {
+        flex-wrap: wrap;
+
+        &__social {
+            padding-top: 2rem;
+        }
+    }
+
 }
