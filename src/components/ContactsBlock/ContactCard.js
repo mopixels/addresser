@@ -9,7 +9,7 @@ class ContactCard extends React.Component {
 			<div className='card' >
 	        	<img 
 				style={{height: '18rem', width: '18rem', display: 'block', margin: '1rem', border: 'outset 3px rgba(0,0,0,0.1)',  borderRadius: '50%', alignSelf: 'center'}} 
-				src={`https://robohash.org/${value.name}.png?set=set3`}
+				src= {`https://avatars.dicebear.com/v2/bottts/${value.name}.svg`}
 				alt='' />
 
 				<div className='card__info'>
@@ -35,7 +35,7 @@ class ContactCard extends React.Component {
           	( <div className='popupCard' >
 	        	<img 
 				style={{height: '18rem', width: '18rem', display: 'block', margin: '1rem', border: 'outset 3px rgba(0,0,0,0.1)',  borderRadius: '50%', alignSelf: 'center'}} 
-				src={`https://robohash.org/${value.name}.png?set=set3`}
+				src= {`https://avatars.dicebear.com/v2/bottts/${value.name}.svg`}
 				alt='' />
 
 				<div className='popupCard__info'>
